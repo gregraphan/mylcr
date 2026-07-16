@@ -301,18 +301,36 @@
 .collection-group .collection-list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  column-gap: var(--space-6);
+  gap: var(--space-5);
+}
+
+.collection-group .collection-list > li {
+  border-top: 0;
 }
 
 .collection-group .collection-list > li:last-child {
   border-bottom: 0;
 }
 
+/* Grouped directories render as cards so interior whitespace reads as
+   intentional card space rather than ragged column gaps. */
+.section--collection-cards {
+  background: var(--surface-sunken);
+}
+
 .collection-group .collection-item {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  padding-block: var(--space-4);
+  padding: var(--space-5);
+  border: 1px solid var(--line-hairline);
+  border-radius: var(--radius-card);
+  background: var(--color-white);
+  box-shadow: var(--shadow-card);
+}
+
+.collection-group .collection-item__summary {
+  margin-bottom: var(--space-4);
 }
 
 /* Standardized card footer: schedule, contact, and link pin to the card
@@ -322,6 +340,7 @@
   gap: var(--space-2);
   margin-top: auto;
   padding-top: var(--space-4);
+  border-top: 1px solid var(--line-hairline);
 }
 
 .collection-item__footer .collection-item__schedule,
