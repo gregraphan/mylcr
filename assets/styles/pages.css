@@ -90,16 +90,6 @@
   margin: 0;
 }
 
-.hero__media::before {
-  position: absolute;
-  z-index: -1;
-  inset: auto -4% -7% 24%;
-  block-size: 58%;
-  border-radius: var(--radius-media);
-  background: var(--tint-teal-10);
-  content: "";
-}
-
 .hero__media img {
   width: 100%;
   height: 100%;
