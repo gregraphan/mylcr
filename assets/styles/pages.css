@@ -788,10 +788,6 @@
     margin-top: var(--space-6);
   }
 
-  .hero__media::before {
-    inset: auto -4% -6% 18%;
-  }
-
   .hero__media {
     grid-column: 1;
     grid-row: auto;
